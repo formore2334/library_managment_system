@@ -6,6 +6,20 @@ name = "pypi"
 [packages]
 
 [dev-packages]
+autopep8 = "*"
+flake8 = "*"
+pytest = "*"
+pytest-cov = "*"
+mypy = "*"
+isort = "*"
 
 [requires]
 python_version = "3.13"
+
+[scripts]
+lint = "flake8 ."
+format = "autopep8 --in-place --recursive ."
+test = "pytest"
+test-cov = "pytest --cov=."
+type-check = "mypy ."
+sort-imports = "isort ."
